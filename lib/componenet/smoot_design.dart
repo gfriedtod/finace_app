@@ -3,7 +3,8 @@ import 'package:flutter/material.dart';
 
 class SmootDesign extends StatelessWidget {
   double value ;
-   SmootDesign({super.key , required this.value});
+  bool darkMode ;
+   SmootDesign({super.key , required this.value, required this.darkMode});
 
   @override
   Widget build(BuildContext context) {
@@ -39,10 +40,10 @@ class SmootDesign extends StatelessWidget {
                             ),
                             SizedBox(height: constraints.maxWidth*0.076923077,),
                             Container(
-                              width: constraints.maxWidth*0.230769231,
-                              height: constraints.maxWidth*0.230769231,
+                              width: constraints.maxWidth*0.130769231,
+                              height: constraints.maxWidth*0.130769231,
                               decoration: BoxDecoration(
-                                color: MyColors.black,
+                                color: (darkMode)?MyColors.white:MyColors.black,
                                 borderRadius: BorderRadius.only(
                                     topLeft: Radius.circular(constraints.maxWidth*0.230769231),
                                     bottomLeft: Radius.circular(constraints.maxWidth*0.230769231),
@@ -70,7 +71,7 @@ class SmootDesign extends StatelessWidget {
 
                               ),
                               SizedBox(
-                                height:constraints.maxWidth*0.115384615,
+                                height:constraints.maxWidth*0.0715384615,
                               )
 
                             ],

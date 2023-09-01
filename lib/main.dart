@@ -1,3 +1,4 @@
+import 'package:finace_app/Page/HomePage.dart';
 import 'package:finace_app/Page/WelcomePage.dart';
 import 'package:finace_app/componenet/ouatlet.dart';
 import 'package:finace_app/componenet/smoot_design.dart';
@@ -20,7 +21,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
 
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+        colorScheme: ColorScheme.fromSeed(seedColor: Color(0xffA7FED9)),
         useMaterial3: true,
       ),
       home: const MyHomePage(title: 'Flutter Demo Home Page'),

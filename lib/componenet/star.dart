@@ -12,12 +12,12 @@ class Star extends StatelessWidget{
       children: [
 
         Container(
-        height: value ,
-        width: value,
+        height: value-1 ,
+        width: value-2,
 
           decoration: BoxDecoration(
             color: Colors.black,
-            border: Border.all(width: 0.0, color: Colors.black),
+            border: Border.all(width: 0.0, color: Colors.white),
 
           ),
       ),
@@ -30,7 +30,8 @@ class Star extends StatelessWidget{
               width: value,
 
 
-                child: CircleAvatar( backgroundColor: Colors.white,))),
+                child:
+                CircleAvatar(backgroundColor: Colors.white,))),
         Positioned(
             bottom: value/2,
             left: value/2,

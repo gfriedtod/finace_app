@@ -1,3 +1,4 @@
+import 'package:finace_app/Page/HomePage.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -17,18 +18,20 @@ class WelcomePage extends StatelessWidget {
     var height = MediaQuery.of(context).size.height;
     var width = MediaQuery.of(context).size.width;
     return Scaffold(
+      backgroundColor: MyColors.white,
       body: Center(
         child: SizedBox(
           width: width,
           child: Stack(
             alignment: Alignment.center,
             children: [
-              Positioned(
-                  left: width * 0.6,
-                  bottom: height * 0.85,
-                  child: SmootDesign(
-                    value: 200,
-                  )),
+              // Positioned(
+              //     left: width * 0.6,
+              //     bottom: height * 0.85,
+              //     child: SmootDesign(
+              //       value: 200,
+              //       darkMode: false,
+              //     )),
 
               Positioned(
                   left: width * -0.1,
@@ -54,10 +57,11 @@ class WelcomePage extends StatelessWidget {
                   )),
 
               Positioned(
-                  left: width * 0.6,
-                  bottom: height * 0.85,
+                  left: width * 0.46,
+                  bottom: height * 0.78,
                   child: SmootDesign(
-                    value: 200,
+                    value: 280,
+                    darkMode: false,
                   )),
               SizedBox(
                 width: width * 0.84,
@@ -108,7 +112,7 @@ class WelcomePage extends StatelessWidget {
                           )
                       ),
                       color: MyColors.black,
-                      onPressed: () {},
+                      onPressed: () {Navigator.push(context, PageRouteBuilder(pageBuilder: (_,__,___) => HomePage()));},
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
