@@ -11,6 +11,7 @@ class PersonCard extends StatelessWidget {
    PersonCard({super.key , required this.image, required this.title, required this.darkMode});
 
   @override
+
   Widget build(BuildContext context) {
     // TODO: implement build
    return SizedBox(

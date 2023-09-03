@@ -17,11 +17,13 @@ class HomePage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         automaticallyImplyLeading: false,
+        forceMaterialTransparency: true,
         toolbarHeight: 100,
         title:
             Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
           Row(
             children: [
+              SizedBox(width: 15,),
               SizedBox(
                 width: 50,
                 height: 50,
@@ -34,7 +36,7 @@ class HomePage extends StatelessWidget {
               ),
               Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
                 Text(
-                  'hello james,',
+                  'Hello james,',
                   style: GoogleFonts.roboto(
                       fontSize: 16,
                       fontWeight: FontWeight.w400,

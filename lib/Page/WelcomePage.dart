@@ -1,4 +1,5 @@
 import 'package:finace_app/Page/HomePage.dart';
+import 'package:finace_app/Page/accueil.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -112,7 +113,7 @@ class WelcomePage extends StatelessWidget {
                           )
                       ),
                       color: MyColors.black,
-                      onPressed: () {Navigator.push(context, PageRouteBuilder(pageBuilder: (_,__,___) => HomePage()));},
+                      onPressed: () {Navigator.push(context, PageRouteBuilder(pageBuilder: (_,__,___) => Accueil( )));},
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [

@@ -1,14 +1,20 @@
 import 'package:finace_app/Page/HomePage.dart';
 import 'package:finace_app/Page/WelcomePage.dart';
+import 'package:finace_app/Page/accueil.dart';
 import 'package:finace_app/componenet/ouatlet.dart';
 import 'package:finace_app/componenet/smoot_design.dart';
 import 'package:finace_app/componenet/star.dart';
 import 'package:finace_app/ressources/mycolors.dart';
+import 'package:finace_app/service/menu/menu_bloc.dart';
+import 'package:finace_app/service/routing_bloc.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 void main() {
   runApp(const MyApp());
+
+
 }
 
 class MyApp extends StatelessWidget {
@@ -16,7 +22,15 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return MultiBlocProvider(
+        providers: [
+        BlocProvider(create:  (context) => RoutingBloc()),
+    BlocProvider(create: (context) => MenuBloc(listButton: [true,
+    false,
+    false,
+    false,
+    false])),
+    ], child: MaterialApp(
       title: 'Flutter Demo',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
@@ -24,7 +38,13 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Color(0xffA7FED9)),
         useMaterial3: true,
       ),
-      home: const MyHomePage(title: 'Flutter Demo Home Page'),
+      home:  Scaffold(
+          body: MyHomePage(title: 'Flutter Demo Home Page'),
+      )
+
+    )
+
+
     );
   }
 }
